@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+.loaderr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.cir {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 190px;
+    color: #fff;
+    font-size: 17px;
+    position: relative;
+    overflow: hidden;
+    z-index: 6;
+}
+
+.cir::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: #13f9a3;
+    border: 3px solid #13f9a3;
+    border-radius: 40%;
+    transform: translateX(-50%);
+    animation: fill 3s linear forwards;
+    z-index: -1;
+}
+
+@keyframes fill {
+    from {
+        top: 250px;
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    to {
+        top: -50px;
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+header {
+    background-color: #333;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    transition: .4s;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbarr {
+    position: sticky;
+    top: 0px;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 100;
+}
+
+.nav-menur {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    font-size: 17px;
+    margin-top: 1.4rem;
+}
+
+.nav-brandingr {
+    font-size: 2rem;
+}
+
+.nav-linkr {
+    transition: .7s ease;
+    padding: 5px;
+    border-radius: .3rem;
+}
+
+.nav-linkr:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    --webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+#st {
+    font-size: large;
+    color: #ff33ff;
+}
+
+.hero {
+    height: 60vh;
+}
+
+.hero .photo {
+    background-image: url('../bg/hero.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 300%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    padding-bottom: 3rem;
+}
+
+.photo::before {
+    content: '';
+    position: absolute;
+    top: 5.4rem;
+    right: 0;
+    left: 0;
+    background-color: #333;
+    opacity: .5;
+    width: 100%;
+    height: 60vh;
+    z-index: 1;
+}
+
+#wel {
+    z-index: 2;
+    color: #fff;
+}
+
+#c1 {
+    background-color: #000;
+}
+
+#c11 {
+    background: url('../bg/cool-color.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 8rem;
+}
+
+#c111 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c111:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c2 {
+    background-color: #000;
+}
+
+#c22 {
+    background: url('../bg/best-pen.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 8rem;
+}
+
+#c222 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c222:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c3 {
+    background-color: #000;
+}
+
+#c33 {
+    background: url('../bg/book.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 8rem;
+}
+
+#c333 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c333:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c4 {
+    background-color: #000;
+}
+
+#c44 {
+    background: url('../bg/file.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 8rem;
+}
+
+#c444 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c444:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c5 {
+    background-color: #000;
+}
+
+#c55 {
+    background: url('../bg/ink-pen.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 8rem;
+}
+
+#c555 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c555:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c6 {
+    background-color: #000;
+}
+
+#c66 {
+    background: url('../bg/color.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 8rem;
+}
+
+#c666 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c666:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c7 {
+    background-color: #000;
+}
+
+#c77 {
+    background: url('../bg/mario.jpg') no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 10rem;
+}
+
+#c777 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c777:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c8 {
+    background-color: #000;
+}
+
+#c88 {
+    background: url('../bg/chdoll.jpg') no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 10rem;
+}
+
+#c888 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c888:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c9 {
+    background-color: #000;
+}
+
+#c99 {
+    background: url('../bg/doll.jpg') no-repeat center center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 10rem;
+}
+
+#c999 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c999:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#c10 {
+    background-color: #000;
+}
+
+#c1010 {
+    background: url('../bg/vehi.jpg') no-repeat center;
+    background-size: cover;
+    overflow-x: hidden;
+    padding: 10rem;
+}
+
+#c101010 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#c101010:hover {
+    background-color: yellow;
+    color: #000;
+}
+
+#to {
+    font-size: 2.5rem;
+}
+
+#toy {
+    color: #ff0000;
+    font-size: 3rem;
+}
+
+#sta {
+    color: #ff0000;
+    font-size: 3rem;
+}
+
+#xer {
+    background-color: #000;
+    color: #fff;
+}
+
+#xerox {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.bgc {
+    background-color: #000;
+    font-size: 2.3rem;
+}
+
+#fac {
+    font-size: 1.5rem;
+    color: #fff000;
+}
+
+#bg2 {
+    background: url('../bg/best-pen.jpg') no-repeat center center;
+    background-size: cover;
+    height: 150%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#bg3 {
+    background: url('../bg/ink-pen.jpg') no-repeat center center;
+    background-size: cover;
+    height: 150%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hh {
+    border: 2px solid #fff;
+}
+
+@media(max-width:870px) {
+    #c11 {
+        padding: 5rem;
+    }
+
+    #c22 {
+        padding: 5rem;
+    }
+
+    #c33 {
+        padding: 5rem;
+    }
+
+    #c44 {
+        padding: 5rem;
+    }
+
+    #c55 {
+        padding: 5rem;
+    }
+
+    #c66 {
+        padding: 5rem;
+    }
+
+    #c77 {
+        padding: 6rem;
+    }
+
+    #c88 {
+        padding: 6rem;
+    }
+
+    #xerox {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+#credits {
+    font-size: 1.3rem;
+}
+
+@media(max-width:768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menur {
+        position: fixed;
+        left: -100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+        color: #fff;
+        z-index: 100;
+    }
+
+    .nav-itemr {
+        margin: 16px 0;
+    }
+
+    .nav-menur.active {
+        left: 0;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .hero .photo {
+        align-items: center;
+        font-size: 200%;
+    }
+
+    .photo::before {
+        content: '';
+        height: 40vh;
+    }
+}
